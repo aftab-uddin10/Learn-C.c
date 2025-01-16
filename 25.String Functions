@@ -1,0 +1,56 @@
+//To use them, you must include the <string.h> header file in your program:
+#include <string.h>
+
+
+//String Length
+//For example, to get the length of a string, you can use the strlen() function:
+
+//Example
+char alphabet[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+printf("%d", strlen(alphabet));
+
+//Example
+char alphabet[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+printf("%d", strlen(alphabet));   // 26
+printf("%d", sizeof(alphabet));   // 27
+
+//It is also important that you know that sizeof will always return the memory size (in bytes), and not the actual string length:
+
+//Example
+char alphabet[50] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+printf("%d", strlen(alphabet));   // 26
+printf("%d", sizeof(alphabet));   // 50
+
+
+//Concatenate Strings
+//To concatenate (combine) two strings, you can use the strcat() function:
+
+//Example
+char str1[20] = "Hello ";
+char str2[] = "World!";
+// Concatenate str2 to str1 (result is stored in str1)
+strcat(str1, str2);
+printf("%s", str1);
+
+//Note that the size of str1 should be large enough to store the result of the two strings combined (20 in our example).
+
+//Copy Strings
+//To copy the value of one string to another, you can use the strcpy() function:
+
+//Example
+char str1[20] = "Hello World!";
+char str2[20];
+strcpy(str2, str1);
+printf("%s", str2);
+
+//Note that the size of str2 should be large enough to store the copied string (20 in our example).
+
+/*Compare Strings
+To compare two strings, you can use the strcmp() function.*/
+
+//Example
+char str1[] = "Hello";
+char str2[] = "Hello";
+char str3[] = "Hi";
+printf("%d\n", strcmp(str1, str2));  // Returns 0 (the strings are equal)
+printf("%d\n", strcmp(str1, str3));  // Returns -4 (the strings are not equal)
